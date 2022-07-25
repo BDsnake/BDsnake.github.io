@@ -115,7 +115,7 @@
     <link href="http://bdsnake.github.io/2022/07/25/first-blog/"/>
     <id>http://bdsnake.github.io/2022/07/25/first-blog/</id>
     <published>2022-07-25T07:30:16.000Z</published>
-    <updated>2022-07-25T15:34:02.516Z</updated>
+    <updated>2022-07-25T15:51:40.333Z</updated>
     
     <content type="html"><![CDATA[<p>博客构建模板</p><p>参考链接：</p><p><a href="https://blog.justlovesmile.top/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/page/2/">https://blog.justlovesmile.top/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/page/2/</a></p><p><a href="https://tding.top/archives/9a232bbe.html">https://tding.top/archives/9a232bbe.html</a></p><span id="more"></span><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">博客构建模板</span> <span class="comment">#文章页面上的显示名称</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-07-25 15:30:16</span> <span class="comment">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">默认分类</span> <span class="comment">#分类</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">tag1</span>,<span class="string">tag2</span>,<span class="string">tag3</span>] <span class="comment">#文章标签，可空，多标签请用格式，注意冒号:后面有个空格</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">摘要</span></span><br><span class="line"><span class="attr">top_img:</span></span><br><span class="line"><span class="attr">cover:</span> <span class="string">/top_img/first-blog.png</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br><span class="line">此标签上面用来显示摘要</span><br></pre></td></tr></table></figure><p>命令</p><p>生成服务：$ hexo g<br>启动服务：$ hexo s</p><p>上传到github：$ hexo d -g</p>]]></content>
     
@@ -124,14 +124,10 @@
     
     
     
-    <category term="默认分类" scheme="http://bdsnake.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+    <category term="hexo" scheme="http://bdsnake.github.io/categories/hexo/"/>
     
     
-    <category term="tag1" scheme="http://bdsnake.github.io/tags/tag1/"/>
-    
-    <category term="tag2" scheme="http://bdsnake.github.io/tags/tag2/"/>
-    
-    <category term="tag3" scheme="http://bdsnake.github.io/tags/tag3/"/>
+    <category term="hexo" scheme="http://bdsnake.github.io/tags/hexo/"/>
     
   </entry>
   
