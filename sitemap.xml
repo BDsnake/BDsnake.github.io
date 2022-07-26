@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bdsnake.github.io/link/index.html</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://bdsnake.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bdsnake.github.io/2022/07/25/first-blog/</loc>
     
     <lastmod>2022-07-25</lastmod>
@@ -83,7 +101,7 @@
 
   
   <url>
-    <loc>http://bdsnake.github.io/tags/%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>http://bdsnake.github.io/tags/hexo/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -91,6 +109,13 @@
   
   <url>
     <loc>http://bdsnake.github.io/tags/Java%E5%90%8E%E7%AB%AF/</loc>
+    <lastmod>2022-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bdsnake.github.io/tags/%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -110,24 +135,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://bdsnake.github.io/tags/hexo/</loc>
-    <lastmod>2022-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>http://bdsnake.github.io/categories/Java%E5%90%8E%E7%AB%AF/</loc>
+    <loc>http://bdsnake.github.io/categories/hexo/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://bdsnake.github.io/categories/hexo/</loc>
+    <loc>http://bdsnake.github.io/categories/Java%E5%90%8E%E7%AB%AF/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
