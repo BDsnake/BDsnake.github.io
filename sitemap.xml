@@ -2,16 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.bdsnake.top/posts/30e05490.html</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bdsnake.top/posts/0.html</loc>
+    <loc>https://www.bdsnake.top/posts/2581e47d.html</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -101,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/personal/about/index.html</loc>
+    <loc>https://www.bdsnake.top/personal/bb/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -110,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/personal/bb/index.html</loc>
+    <loc>https://www.bdsnake.top/personal/about/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -128,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/life/movies/index.html</loc>
+    <loc>https://www.bdsnake.top/life/music/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -137,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/life/music/index.html</loc>
+    <loc>https://www.bdsnake.top/life/movies/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -500,13 +491,6 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2023-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bdsnake.top/tags/Markdown/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -528,7 +512,7 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/tags/SpringCloud/</loc>
+    <loc>https://www.bdsnake.top/tags/Mybatis-Plus/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -542,14 +526,7 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/tags/Mybatis-Plus/</loc>
-    <lastmod>2023-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bdsnake.top/tags/%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://www.bdsnake.top/tags/SpringCloud/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -570,7 +547,21 @@
   </url>
   
   <url>
+    <loc>https://www.bdsnake.top/tags/%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.bdsnake.top/tags/SpringMVC/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bdsnake.top/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -591,7 +582,14 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>https://www.bdsnake.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bdsnake.top/tags/MySQL/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -649,13 +647,6 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2023-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bdsnake.top/categories/%E6%BC%94%E7%A4%BA/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -670,6 +661,13 @@
   </url>
   
   <url>
+    <loc>https://www.bdsnake.top/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.bdsnake.top/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -677,7 +675,14 @@
   </url>
   
   <url>
-    <loc>https://www.bdsnake.top/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>https://www.bdsnake.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bdsnake.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
