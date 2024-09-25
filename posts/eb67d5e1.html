@@ -1,0 +1,849 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>计算机组成原理复习 | BDsnake's Coding Life</title><meta name="keywords" content="期末复习"><meta name="author" content="BDsnake"><meta name="copyright" content="BDsnake"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="摘要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理复习">
+<meta property="og:url" content="https://bdsnake.github.io/posts/eb67d5e1.html">
+<meta property="og:site_name" content="BDsnake&#39;s Coding Life">
+<meta property="og:description" content="摘要">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://w.wallhaven.cc/full/wy/wallhaven-wyqjoq.jpg">
+<meta property="article:published_time" content="2022-11-16T07:30:16.000Z">
+<meta property="article:modified_time" content="2024-08-12T05:48:45.988Z">
+<meta property="article:author" content="BDsnake">
+<meta property="article:tag" content="期末复习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/wy/wallhaven-wyqjoq.jpg"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://bdsnake.github.io/posts/eb67d5e1"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机组成原理复习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-12 13:48:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="BDsnake's Coding Life" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp" onerror="onerror=null;src='/assets/r1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">BDsnake's Coding Life</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">计算机组成原理复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2022-11-16T07:30:16.000Z" title="发表于 2022-11-16 15:30:16">2022-11-16</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-12T05:48:45.988Z" title="更新于 2024-08-12 13:48:45">2024-08-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">期末复习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">1w</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>31分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机组成原理复习"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>计算机组成原理复习</h1>
+<h1>零、老师说了啥</h1>
+<p>大家先复习选择题和大题，选择题30道，**从给你们的题库出！**强调了</p>
+<p>(不演了，建议对比陈志)</p>
+<p>大题6—7个：(上课天天叨叨的题)</p>
+<p>大题6个：</p>
+<blockquote>
+<ul>
+<li><strong>扩容</strong> 画图一定会画 扩容丢分点：下角标 芯片 片选线 片选译码</li>
+</ul>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221117104332496.png" alt="image-20221117104332496" style="zoom:33%;" />
+<ul>
+<li>
+<p><strong>磁盘</strong></p>
+<p>考的就是 153 152页喜提 4.38 4.39 也就是考这种类型题</p>
+</li>
+<li>
+<p><strong>cache、十进制的整数、小数化成二进制数，求真值的原码反码补码</strong></p>
+<p>4.8 4.9 4.11命中率第二小题可以不知道 但是命中率一定要知道 cache命中率怎么求在p111 例4.7  4.8 4.9 这三个例题做到特别熟</p>
+</li>
+<li>
+<p><strong>求相反数的补码，求两数相加或减的补码计算过程，</strong></p>
+<p>包括符号位按位取反末位加一 加法减法运算以补码的形式 p237 出的题是给你一个十进制数，让你化成一个二进制数，如例题6.12,必须先会十进制整数小数换成二进制，会原码反码补码互化</p>
+</li>
+<li>
+<p><strong>7章例题</strong></p>
+<p>例题7.1是重点 7.1是重点 7.1 7.5是历年重点，7.1节里的知识点也是重点 看例题7.1那两问，就是考点</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221117110023202.png" alt="image-20221117110023202" style="zoom:33%;" />
+<p>三地址要求是13条、8条怎么设计？随便说，怎么设计拓展操作码注意0-7是三个数 地址码的个数和长度告诉你</p>
+</li>
+<li>
+<p><strong>9.1</strong></p>
+<p>视频里面讲的很清楚</p>
+</li>
+</ul>
+<p>10.1 10.1不用看正好六个题</p>
+</blockquote>
+<p>大题每年都出的差不多</p>
+<p>简答题名词解释多一点</p>
+<p>名词解释5*2，名词解释都在复习提纲，3中文</p>
+<p>第四大题和第五大题总共六个题，4+2</p>
+<h1>零点五、考试提纲</h1>
+<p>一、选择题（共30小题，每题1分，共 30 分）<br>
+二、名词解释（共5小题，每题2分，共 10 分）<br>
+三、简答题：（共5小题，每题 4分，共 20 分）<br>
+四、综合计算题（共4小题，每题5分，共 20 分）<br>
+五、综合应用题（共2小题，每题10分，共20分）</p>
+<p>选择题30道，从给的题库出</p>
+<p>简答题：</p>
+<ol>
+<li>如何理解计算机组成和计算机体系结构？P7</li>
+<li>冯诺依曼计算机的特点是什么？P8</li>
+<li>请指出计算机的5大硬件组成及计算机硬件的3个主要技术指标。P9 P17</li>
+<li>常见的总线集中控制优先权仲裁方式有哪几种？P57</li>
+<li>请写总线周期的4个阶段分别是什么？P59</li>
+<li>存储系统层次结构主要体现在哪两个存储层次上？分别主要解决什么<br>
+问题？P71</li>
+<li>动态RAM和静态RAM的区别。P87</li>
+<li>常用的提高访存速度的区别。P103</li>
+<li>输入输出系统的发展大致分几个阶段？P156</li>
+<li>简述I/Ｏ设备与主机信息传输的控制方式。P162</li>
+<li>指令一般是由哪两部分组成的？各部分的作用分别是什么？P300</li>
+<li>相比CISC机，RISC机的主要优点有哪些？P333</li>
+<li>构成CPU的主要四个部件分别是什么？P338</li>
+<li>影响流水线性能的因素有哪些？P349</li>
+<li>简述组合逻辑设计控制单元的步骤。P401</li>
+<li>简述微程序设计控制单元的步骤。P415</li>
+</ol>
+<p>名词解释：</p>
+<p>1.7. 解释下列概念：<br>
+主机、CPU、主存、存储单元、存储元件、存储基元、存储元、存储字、存储字长、存储容量、机器字长、指令字长。<br>
+解：P9-10<br>
+主机：是计算机硬件的主体部分，由CPU和主存储器MM合成为主机。<br>
+CPU：中央处理器，是计算机硬件的核心部件，由运算器和控制器组成；（早期的运算器和控制器不在同一芯片上，现在的CPU内除含有运算器和控制器外还集成了CACHE）。<br>
+主存：计算机中存放正在运行的程序和数据的存储器，为计算机的主要工作存储器，可随机存取；由存储体、各种逻辑部件及控制电路组成。<br>
+存储单元：可存放一个机器字并具有特定存储地址的存储单位。<br>
+存储元件：存储一位二进制信息的物理元件，是存储器中最小的存储单位，又叫存储基元或存储元，不能单独存取。<br>
+存储字：一个存储单元所存二进制代码的逻辑单位。<br>
+存储字长：一个存储单元所存储的二进制代码的总位数。<br>
+存储容量：存储器中可存二进制代码的总量；（通常主、辅存容量分开描述）。<br>
+机器字长：指CPU一次能处理的二进制数据的位数，通常与CPU的寄存器位数有关。<br>
+指令字长：机器指令中二进制代码的总位数。</p>
+<p>1.8. 解释下列英文缩写的中文含义：<br>
+CPU、PC、IR、CU、ALU、ACC、MQ、X、MAR、MDR、I/O、MIPS、CPI、FLOPS<br>
+解：全面的回答应分英文全称、中文名、功能三部分。<br>
+CPU：Central Processing Unit，中央处理机（器），是计算机硬件的核心部件，主要由运算器和控制器组成。<br>
+PC：Program Counter，程序计数器，其功能是存放当前欲执行指令的地址，并可自动计数形成下一条指令地址。<br>
+IR：Instruction Register，指令寄存器，其功能是存放当前正在执行的指令。<br>
+CU：Control Unit，控制单元（部件），为控制器的核心部件，其功能是产生微操作命令序列。<br>
+ALU：Arithmetic Logic Unit，算术逻辑运算单元，为运算器的核心部件，其功能是进行算术、逻辑运算。<br>
+ACC：Accumulator，累加器，是运算器中既能存放运算前的操作数，又能存放运算结果的寄存器。<br>
+MQ：Multiplier-Quotient Register，乘商寄存器，乘法运算时存放乘数、除法时存放商的寄存器。<br>
+X：此字母没有专指的缩写含义，可以用作任一部件名，在此表示操作数寄存器，即运算器中工作寄存器之一，用来存放操作数；<br>
+MAR：Memory Address Register，存储器地址寄存器，在主存中用来存放欲访问的存储单元的地址。<br>
+MDR：Memory Data Register，存储器数据缓冲寄存器，在主存中用来存放从某单元读出、或要写入某存储单元的数据。<br>
+I/O：Input/Output equipment，输入/输出设备，为输入设备和输出设备的总称，用于计算机内部和外界信息的转换与传送。<br>
+CPI：执行一条指令所需的周期数。<br>
+MIPS：Million Instruction Per Second，每秒执行百万条指令数，为计算机运算速度指标的一种计量单位。</p>
+<p>总线:是一种能由多个部件分时共享的公共信息传送线路。<br>
+总线宽度：通常指数据总线的根数；<br>
+总线带宽：总线的数据传输率，指单位时间内总线上传输数据的位数；<br>
+总线复用：指同一条信号线可以分时传输不同的信号。<br>
+总线的主设备（主模块）：指一次总线传输期间，拥有总线控制权的设备（模块）；<br>
+总线的从设备（从模块）：指一次总线传输期间，配合主设备完成数据传输的设备（模块），它只能被动接受主设备发来的命令；<br>
+总线周期：通常指完成一次总线操作的时间；<br>
+总线的通信控制：指总线传送过程中双方的时间配合方式。</p>
+<p>辅存：辅助存储器，用于存放当前暂不执行的程序和数据，以及一些需要永久保存的信息。<br>
+Cache：高速缓冲存储器，介于CPU和主存之间，用于解决CPU和主存之间速度不匹配问题。<br>
+RAM：半导体随机存取存储器，主要用作计算机中的主存。<br>
+SRAM：静态半导体随机存取存储器。<br>
+DRAM：动态半导体随机存取存储器。<br>
+ROM：掩膜式半导体只读存储器。由芯片制造商在制造时写入内容，以后只能读出而不能写入。<br>
+PROM：可编程只读存储器，由用户根据需要确定写入内容，只能写入一次。<br>
+EPROM：紫外线擦写可编程只读存储器。需要修改内容时，现将其全部内容擦除，然后再编程。擦除依靠紫外线使浮动栅极上的电荷泄露而实现。<br>
+EEPROM：电擦写可编程只读存储器。<br>
+CDROM：只读型光盘。<br>
+Flash Memory：闪速存储器。或称快擦型存储器。<br>
+CMAR：控存地址寄存器<br>
+CMDR：控存数据寄存器</p>
+<ol start="4">
+<li>说明存取周期和存取时间的区别。<br>
+解：存取周期和存取时间的主要区别是：存取时间仅为完成一次操作的时间，而存取周期不仅包含操作时间，还包含操作后线路的恢复时间。即：<br>
+存取周期 = 存取时间 + 恢复时间</li>
+<li>什么是存储器的带宽？若存储器的数据总线宽度为32位，存取周期为200ns，则存储器的带宽是多少？<br>
+解：存储器的带宽指单位时间内从存储器进出信息的最大数量。<br>
+存储器带宽 = 1/200ns ×32位 = 160M位/秒 = 20MB/秒 = 5M字/秒<br>
+注意：字长32位，不是16位。（注：1ns=10-9s）</li>
+</ol>
+<p>机器指令：是人们习惯把每一条机器语言的语句称为机器指令。<br>
+指令系统：全部机器指令的集合称为机器的指令系统。</p>
+<p>寻址方式：确定本条指令的数据地址以及下一条将要执行的指令地址的方法。</p>
+<p>向量地址：是硬件电路（向量编码器）产生的中断源的内存地址编号；<br>
+中断入口地址：是中断服务程序首址。<br>
+中断向量地址和入口地址的联系：    中断向量地址可理解为中断服务程序入口地址指示器（入口地址的地址），通过它访存可获得中断服务程序入口地址。 (两种方法：在向量地址所指单元内</p>
+<p>指令周期：CPU每取出并执行一条指令所需的全部时间。<br>
+机器周期：是在同步控制的机器中，执行指令周期中一步相对完整的操作（指令<br>
+步）所需时间，通常安排机器周期长度等于主存周期；<br>
+时钟周期：是指计算机主时钟的周期时间，它是计算机运行时最基本的时序单位，<br>
+对应完成一个微操作所需时间，通常时钟周期等于计算机主频的倒数。</p>
+<p>大题6个： 扩容、磁盘、cache、十进制的整数、小数化成二进制数，求真值的原码反码补码，求相反数的补码，求两数相加或减的补码计算过程，7章例题，9.1、 10.1这些大题必须会。</p>
+<h1>一、简答题</h1>
+<h2 id="1-如何理解计算机组成和计算机体系结构？P7">1.如何理解计算机组成和计算机体系结构？P7</h2>
+<p>计算机组成是概念性的结构和功能特性；计算机组成指如何实现计算机体系结构所体现的属性</p>
+<h2 id="2-冯诺依曼计算机的特点是什么？P8">2.冯诺依曼计算机的特点是什么？P8</h2>
+<p>由五大部件组成,运算器-存储器-控制器-输入设备-输出设备</p>
+<p>指令和数据以同等地位放于存储器内</p>
+<p>指令和数据都用二进制表示</p>
+<p>指令由操作码和地址码组成</p>
+<p>指令在存储器内按顺序存放</p>
+<p>机器已运算器为中心</p>
+<ol>
+<li>
+<h2 id="请指出计算机的5大硬件组成及计算机硬件的3个主要技术指标。P9-P17">请指出计算机的5大硬件组成及计算机硬件的3个主要技术指标。P9 P17</h2>
+</li>
+</ol>
+<p>硬件组成见2 技术指标：机器字长-存储容量-运算速度</p>
+<h2 id="常见的总线集中控制优先权仲裁方式有哪几种？P57">常见的总线集中控制优先权仲裁方式有哪几种？P57</h2>
+<p>集中式和分布式。将控制逻辑集中在一处；将控制逻辑分散在各个设备</p>
+<h2 id="请写总线周期的4个阶段分别是什么？P59">请写总线周期的4个阶段分别是什么？P59</h2>
+<p>申请分配-寻址-传数-结束</p>
+<h2 id="存储系统层次结构主要体现在哪两个存储层次上？分别主要解决什么问题？P71">存储系统层次结构主要体现在哪两个存储层次上？分别主要解决什么问题？P71</h2>
+<p>缓存-主存和主存-辅存；缓存-主存 解决CPU和主存速度不匹配~主存-辅存 解决存储器系统容量问题</p>
+<h2 id="动态RAM和静态RAM的区别。P87">动态RAM和静态RAM的区别。P87</h2>
+<p>动态RAM 集成度高 引脚少封装尺寸小 功耗小 价格便宜 速度低 需要再生</p>
+<h2 id="常用的提高访存速度的区别。P103">常用的提高访存速度的区别。P103</h2>
+<h2 id="输入输出系统的发展大致分几个阶段？P156">输入输出系统的发展大致分几个阶段？P156</h2>
+<p>早期阶段-接口模块和DMA阶段-通道结构阶段-具有IO处理机阶段</p>
+<h2 id="简述I-O设备与主机信息传输的控制方式。P162">简述I/Ｏ设备与主机信息传输的控制方式。P162</h2>
+<p>辐射式连接-每台IO设备都有一套控制线和一组信号线</p>
+<p>总线连接 通过一组总线将所有IO设备与主机连接</p>
+<h2 id="指令一般是由哪两部分组成的？各部分的作用分别是什么？P300">指令一般是由哪两部分组成的？各部分的作用分别是什么？P300</h2>
+<p>操作码-指明要完成的操作 地址码-指出源操作数的地址</p>
+<h2 id="相比CISC机，RISC机的主要优点有哪些？P333">相比CISC机，RISC机的主要优点有哪些？P333</h2>
+<p>充分利用芯片面积-提高运算速度-便于设计降低成本-有效支持高级语言程序</p>
+<h2 id="构成CPU的主要四个部件分别是什么？P338">构成CPU的主要四个部件分别是什么？P338</h2>
+<p>运算器-控制器-寄存器-终端系统</p>
+<h2 id="影响流水线性能的因素有哪些？P349">影响流水线性能的因素有哪些？P349</h2>
+<p>结构因素-资源冲突 数据因素-各条指令重叠操作改变操作数访问顺序 控制因素 转移指令引起</p>
+<h2 id="简述组合逻辑设计控制单元的步骤。P401">简述组合逻辑设计控制单元的步骤。P401</h2>
+<p>列出微操作命令的操作时间表-写出微操作命令的最简逻辑表达式-画出微操作命令的逻辑题</p>
+<h2 id="简述微程序设计控制单元的步骤。P415">简述微程序设计控制单元的步骤。P415</h2>
+<p>写出对应指令的微操作-确定微指令格式-编写微指令码点</p>
+<h1>对选择题的研究</h1>
+<p>选择题看题库吧，记录一下研究结果</p>
+<h2 id="第一章">第一章</h2>
+<p>不会优先蒙C，其次蒙B，巨多</p>
+<p>MFLOPS看到就选，不用管为什么</p>
+<h1>对大题的研究</h1>
+<h2 id="扩容"><strong>扩容</strong></h2>
+<p>画图一定会画 扩容丢分点：下角标 芯片 片选线 片选译码</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221117104332496.png" alt="image-20221117104332496" style="zoom: 80%;" />
+<h2 id="磁盘"><strong>磁盘</strong></h2>
+<p>考的就是 153 152页喜提 4.38 4.39 也就是考这种类型题</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221203225107054.png" alt="image-20221203225107054"></p>
+<p>38</p>
+<p>（1）6片，最外两侧可以记录，则有12个存储面可用</p>
+<p>（2）柱面即磁道面，（33-22）/2=5.5cm，磁道数为40道/cm*5.5cm=220道</p>
+<p>则有220个柱面</p>
+<p>（3）内径22cm，周长为3.14×22=69.08cm，内层密度为400位/cm，则一条磁道的容量为69.08×400=27632位=3454B</p>
+<p>盘组总存储容量为：3454×220×12=9MB</p>
+<p>（4）数据传输率为每条磁道容量*转速，转速为3600转/分，即60转/秒</p>
+<p>3454*60=200KB/S</p>
+<p>39  有疑问</p>
+<p>解:(1)存储容量 = 275 道× 12 288B/ 道× 4 面 = 13 516 800B</p>
+<p>(2)最高位密度 = 12 288B/ ( ×230)= 17B/mm = 136 位/mm</p>
+<p>(向下取整)</p>
+<p>最大磁道直径 =230mm+2×275 道/(5 道/mm) = 230mm +</p>
+<p>110mm = 340mm</p>
+<p>最低位密度 = 12 288B /( ×340)= 11B/mm = 92 位 / mm</p>
+<p>(向下取整)</p>
+<p>(3)磁盘数据传输率 = 12 288B × 3000 转/ 分=12 288B × 50</p>
+<p>转/ 秒=614 400B/s</p>
+<p>(4)平均等待时间 = 1s/50 / 2 = 10ms</p>
+<h2 id="cache、十进制的整数、小数化成二进制数，求真值的原码反码补码"><strong>cache、十进制的整数、小数化成二进制数，求真值的原码反码补码</strong></h2>
+<p>4.8 4.9 4.11命中率第二小题可以不知道 但是命中率一定要知道 cache命中率怎么求在p111 例4.7  4.8 4.9 这三个例题做到特别熟</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221210102344152.png" alt="image-20221210102344152"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221210104236938.png" alt="image-20221210104236938"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221210103945151.png" alt="image-20221210103945151"></p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221210111552279.png" alt="image-20221210111552279" style="zoom:150%;" />
+<h2 id="求相反数的补码，求两数相加或减的补码计算过程，"><strong>求相反数的补码，求两数相加或减的补码计算过程，</strong></h2>
+<p>包括符号位按位取反末位加一 加法减法运算以补码的形式 p237 出的题是给你一个十进制数，让你化成一个二进制数，如例题6.12,必须先会十进制整数小数换成二进制，会原码反码补码互化</p>
+<h2 id="7章例题"><strong>7章例题</strong></h2>
+<p>例题7.1是重点 7.1是重点 7.1 7.5是历年重点，7.1节里的知识点也是重点 看例题7.1那两问，就是考点</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221117110023202.png" alt="image-20221117110023202" style="zoom: 80%;" />
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221210153554831.png" alt="image-20221210153554831"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0.assets/image-20221210220710499.png" alt="image-20221210220710499"></p>
+<p>三地址要求是13条、8条怎么设计？随便说，怎么设计拓展操作码注意0-7是三个数 地址码的个数和长度告诉你</p>
+<h2 id="9-1"><strong>9.1</strong></h2>
+<p>视频里面讲的很清楚</p>
+<p>10.1 10.1不用看正好六个题</p>
+<h1>知识点速通</h1>
+<p>看到一篇很好的博客</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45863060/category_11441380.html">https://blog.csdn.net/weixin_45863060/category_11441380.html</a></p>
+<h2 id="第一章-计算机基本概念">第一章 计算机基本概念</h2>
+<h2 id="第二章-数据信息表示方法">第二章 数据信息表示方法</h2>
+<h2 id="第三章-指令信息表示方法">第三章 指令信息表示方法</h2>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/LoveHoneyYou/article/details/125280255">https://blog.csdn.net/LoveHoneyYou/article/details/125280255</a></p>
+<p>寻址方式：<a target="_blank" rel="noopener" href="https://blog.csdn.net/KK_1657654189/article/details/121826602">https://blog.csdn.net/KK_1657654189/article/details/121826602</a></p>
+<h3 id="指令寻址">指令寻址</h3>
+<p>顺序寻址 跳跃寻址</p>
+<p>顺序：每次PC+1  跳跃：由转移指令决定</p>
+<h3 id="数据寻址-感觉选择题">数据寻址 感觉选择题</h3>
+<p>立即寻址：A就是操作数。给的地址不是地址，就是操作数，不用访存</p>
+<p>直接寻址：EA=A。直接给主存单元地址</p>
+<p>隐含寻址：EA=???指令字中不明显地给出操作数的地址，其操作数的地址隐含在操作码或某个寄存器中。</p>
+<p>间接寻址：EA=(A)指令字中的形式地址不直接指出操作数的地址，而是指出操作数有效地址所在的存储单元地址，也就是有效地址是由形式地址间接提供的，即为间接寻址，即EA=(A)</p>
+<p>寄存器直接寻址：EA=Ri在寄存器寻址的指令字中，地址码字段直接指出了寄存器编号，其操作数在寄存器内。</p>
+<p><strong>寄存器间接寻址：EA=(Ri)操作数保存在内存单元中，寄存器中保存的是操作数的地址 [循环程序]</strong></p>
+<p>基址寻址：采用专用寄存器作基址寄存器或采用通用寄存器作基址寄存器。EA=BR+A或EA=R0+A 其中BR 与 RO 分别为专用寄存器与通用寄存器 BR由程序决定 R0在程序执行过程中内容不变</p>
+<p><strong>变址寻址：EA=IX+A IX为变址寄存器（IX由用户给定） [处理数组问题 循环]</strong></p>
+<p>**相对寻址：EA=(PC)+A[程序浮动和转移指令]相对寻址的最大特点是转移地址不固定，它可随PC值的变化而变化，因此，无论程序在主存的哪段区域，都可正确运行，对于编写浮动程序特别有利。**PC存储的是指令</p>
+<p>堆栈寻址：操作数存放在堆栈中，隐含使用堆栈指针(SP)作为操作数地址</p>
+<p>CISC和RISC</p>
+<h3 id="指令格式">指令格式</h3>
+<p>1.指令字（简称指令）：即表示一条指令的机器字。<br>
+2.指令格式：是指令字用二进制代码表示的结构形式，由操作码字段和地址码字段组成。<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/20200530101720749.png" alt="在这里插入图片描述"><br>
+3.操作码<br>
+（1）<strong>固定长度操作码</strong>：操作码所占的二进制位数固定不变，而且集中放在指令字的一个字段中。<br>
+（2）<strong>可变长度操作码</strong>：操作码扩展技术应用，操作码长度可变且分散地放在指令的不同字段中。<br>
+（3）<strong>操作码扩展方法</strong>：让操作数地址个数多的指令（如三地址指令）的操作码字段短些，操作数地址个数少的指令（如一或零地址指令）的操作码字段长些。<br>
+（4)如果按照定长编码的方法，4位操作码字段最多只能表示<strong>16条</strong>不同的三地址指令。</p>
+<h3 id="RISC与CISC">RISC与CISC</h3>
+<p><strong>RISC全称Reduced Instruction Set Compute，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86">精简指令集</a>计算机。</strong></p>
+<p><strong>CISC全称Complex Instruction Set Computers，复杂指令集计算机。</strong></p>
+<p><em><strong>省大流：先有的CISC，再有的RISC，因为CISC长指令太复杂了，而且很多不常用，所以精简出来基础操作RISC，RISC一定采用流水线！</strong></em></p>
+<p>CISC既有简单指令也有复杂指令，后来人们发现典型程序中80%的语句都是使用计算机中20%的指令，而这20%的指令都属于简单指令；因此花再多时间去研究复杂指令，也仅仅只有20%的使用概率，并且复杂指令会影响计算机的执行速度。既然典型程序的80%都是使用简单指令完成，那剩下的20%语句用简单语句来重新组合一下模拟这些复杂指令就行了，而不需要使用这些复杂指令，于是RISC就出现了。</p>
+<p><strong>RISC的主要特点：</strong></p>
+<p>1）选取使用频率较高的一些简单指令以及一些很有用但不复杂的指令，让复杂指令的功能由使用频率高的简单指令的组合来实现。</p>
+<p>2）指令长度固定，指令格式种类少，寻址方式种类少。</p>
+<p>3）只有取数/存数指令访问存储器，其余指令的操作都在寄存器内完成。</p>
+<p>4）CPU中有多个通用寄存器（比CICS的多）</p>
+<p>5）采用流水线技术**（RISC一定采用流水线）**，大部分指令在一个时钟周期内完成。采用超标量超流水线技术，可使每条指令的平均时间小于一个时钟周期。</p>
+<p>6）控制器采用组合逻辑控制，不用微程序控制。</p>
+<p>7）采用优化的编译程序</p>
+<p><strong>CICS的主要特点：</strong></p>
+<p>1）指令系统复杂庞大，指令数目一般多达200~300条。</p>
+<p>2）指令长度不固定，指令格式种类多，寻址方式种类多。</p>
+<p>3）可以访存的指令不受限制（RISC只有取数/存数指令访问存储器）</p>
+<p>4）各种指令执行时间相差很大，大多数指令需多个时钟周期才能完成。</p>
+<p>5）控制器大多数采用微程序控制。</p>
+<p>6）难以用优化编译生成高效的目标代码程序</p>
+<p>RISC与CICS的比较</p>
+<p>1.RISC比CICS更能提高计算机运算速度；RISC寄存器多，就可以减少访存次数，指令数和寻址方式少，因此指令译码较快。</p>
+<p>2.RISC比CISC更便于设计，可降低成本，提高可靠性。</p>
+<p>3.RISC能有效支持高级语言程序。</p>
+<p>4.CICS的指令系统比较丰富，有专用指令来完成特定的功能，因此处理特殊任务效率高。</p>
+<h2 id="第四章-CPU系统">第四章 CPU系统</h2>
+<p>CPU的功能：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/355bbc58a29e4eddb2c42afe85f9c67f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG9yYemdkuibmQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>
+运算器和控制器的功能：<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/9786fb21f8ca4ba89fce2040aca1c4b2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG9yYemdkuibmQ==,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>
+<strong>运算器</strong><br>
+运算器是指计算机中进行各种算术和逻辑运算操作的部件， 其中算术逻辑单元是中央处理核心的部分。</p>
+<p>（1）算术逻辑单元（ALU）。算术逻辑单元的运算主要是进行二位元算术运算，如加法、减法、乘法。在运算过程中，算术逻辑单元主要是以计算机指令集中执行算术与逻辑操作。</p>
+<p>（2）中间寄存器（IR）。其长度为 128 位，其通过操作数来决定实际长度。IR 在“进栈并取数”指令中发挥重要作用，在执行该指令过程中，将ACC的内容发送于IR，之后将操作数取到ACC，后将IR内容进栈。</p>
+<p>（3）运算累加器（ACC）。当前的寄存器一般都是单累加器，其长度为128位。对于ACC来说，可以将它看成可变长的累加器。</p>
+<p>（4）描述字寄存器（DR）。其主要应用于存放与修改描述字中。DR的长度为64位，为了简化数据结构处理，使用描述字发挥重要作用。</p>
+<p>（5）B寄存器。其在指令的修改中发挥重要作用，B 寄存器长度为32位，在修改地址过程中能保存地址修改量，主存地址只能用描述字进行修改。</p>
+<p><strong>控制器</strong><br>
+控制器是指按照预定顺序改变主电路或控制电路的接线和 改变电路中电阻值来控制电动机的启动、调速、制动与反向的主令装置。控制器由程序状态寄存器PSR，系统状态寄存器SSR， 程序计数器PC，指令寄存器等组成，其作为“决策机构”，主要任务就是发布命令，发挥着整个计算机系统操作的协调与指挥作用。 控制的分类主要包括两种，分别为组合逻辑控制器、微程序控制器，两个部分都有各自的优点与不足。其中组合逻辑控制器结构相对较复杂，但优点是速度较快；微程序控制器设计的结构简单，但在修改一条机器指令功能中，需对微程序的全部重编。</p>
+<h3 id="指令执行过程">指令执行过程</h3>
+<p><strong>指令周期</strong><br>
+<strong>指令周期是取出一条指令并执行这条指令的时间。</strong><br>
+一般由若干个机器周期组成，是从取指令、分析指令到执行完所需的全部时间。每个机器周期又由若干个时钟周期组成。时钟周期是时钟频率的倒数，也可称为节拍脉冲或T周期，是处理操作<strong>最基本的单位</strong>。<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/eb68e2ff6b2547bea3afdb5880d14c05.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG9yYemdkuibmQ==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>
+<strong>指令执行方案</strong><br>
+一个指令周期通常要包括几个执行步骤，每个步骤完成指令的部分功能；通常有以下几种方案来安排指令的执行步骤：</p>
+<p>1、单指令周期<br>
+对所有指令都选用相同的执行时间来完成。<br>
+指令之间串行执行，指令周期取决于执行时间最长的指令的执行时间。</p>
+<p>2、多指令周期<br>
+对不同类型的指令选用不同的执行步骤来完成。<br>
+指令之间仍然是串行，但可选用不同的时钟周期来完成不同指令的执行过程，指令需要几个周期就为其分配几个周期，而不要求所用指令的执行时间相同。</p>
+<p>3、流水线方案<br>
+指令之间可以并行执行的方案。<br>
+其追求的目标是力争在每个时钟周期完成一条指令的执行过程（理想情况下），此方案通过在每个时钟周期启动一条指令，尽量让多条指令同时运行，但各自处在不同的执行步骤中。</p>
+<p><strong>指令周期的数据流</strong></p>
+<p>数据流是根据指令要求依次访问的数据序列。在指令执行的不同阶段，要求访问的数据序列是不同的。对于不同的指令，数据流往往也是不同的。</p>
+<p><strong>1.取指周期</strong></p>
+<p>取指周期是指令周期的第一个阶段，也称取指令阶段。即控制单元执行程序的周期内，从存储单元取出所要执行的指令的过程。（如Add指令）<br>
+“取指”控制单元执行程序的周期内，从存储单元取出所要执行的指令的过程。这个操作是公共的操作，与具体的指令无关，<strong>不需要操作码控制</strong></p>
+<p><strong>2.间址周期</strong><br>
+间址周期是为了取出操作数的有效地址。</p>
+<p><strong>3.执行周期</strong><br>
+不同指令的执行周期操作命令不一样，所以无统一格式。</p>
+<p><strong>4.中断周期</strong><br>
+任务是处理中断请求。</p>
+<h3 id="各种字长">各种字长</h3>
+<ul>
+<li>字长/机器字长：通常是指 CPU 内部用于整数运算的数据通路的宽度，因此字长 CPU内部用于整数运算的运算器位数和通用寄存器宽度，反映了计算机处理信息的能力。
+<ul>
+<li>例如通常所说的“某 16 或 32 位机器”中，16、32 指的就是字长，也称机器字长。</li>
+</ul>
+</li>
+<li>指令字长：一个指令字中包含的二进制代码的位数。</li>
+<li>存储字长：一个存储单元存储的二进制代码的长度。
+<ul>
+<li>指令字长和存储字长都必须是字节的整数倍。</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li>指令字长一般取存储字长的整数倍，若指令字长的等于存储字长的 2 倍，则需要 2 个访存周期来取出一条指令；若指令字长的等于存储字长，则取指周期 = 机器周期。</li>
+<li>早期的存储字长一般与指令字长、字长相等，因此访问一次主存便可以取出一条指令或一个数据。随着计算机的发展，指令字长、字长都可变，但必须都是字节的整数倍。</li>
+</ul>
+<h2 id="第五章-存储系统">第五章 存储系统</h2>
+<p>一、按在计算机中的作用分类<br>
+1、主存储器：用来存放计算机运行期间所需要的大量程序和数据。CPU可以直接访问，也和高速缓冲器Cache以及辅助存储器交换数据。特点是容量小、存取速度较快、价格较高<br>
+2、辅助存储器：又称外存，不能与CPU直接交换信息。特点是容量极大、存取速度较慢，成本低<br>
+3、高速缓冲存储器：简称Cache,位于主存和CPU之间，存取速度高、价格贵、容量小<br>
+二、按存储介质分类：磁表面存储器、磁芯存储器、半导体存储器、光存储器<br>
+三、按存储方式分类<br>
+1、随机存储器RAM:存储器任何一个<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83&amp;spm=1001.2101.3001.7020">存储单元</a>的内容都可以随机存储，与物理位置无关。优点：读写方便，主要用作主存或高速缓冲存储器。<br>
+2、只读存储器ROM:只能随机读出而不能写入，即使断电内容也不会丢失。与随机存储器共同作为主存的一部分，统一构成主存的地址域<br>
+3、串行访问存储器：对存储单元进行读/写操作时，需按其物理位置的先后顺序寻址，包括顺序存储寄存器如磁带，直接存取寄存器如磁盘。<br>
+直接存取存储器即不像随机存取那样，也不像顺序存取那样完全按照顺序存取，而是介于两者之间。存取信息时，通常先寻找整个存储区域中的某个小区域，再小区域内顺序查找。<br>
+四、按信息的可保存性分类。<br>
+1、断电后，存储信息消失的称为易失性存储器，如ARM<br>
+2、断电后扔保持存储信息的称为非易失性存储器，如ROM,磁盘表面寄存器光寄存器</p>
+<h3 id="存储方式">存储方式</h3>
+<p><strong>随机存储RAM</strong></p>
+<p>主存</p>
+<p><strong>顺序存储SAM</strong></p>
+<p>磁带</p>
+<p>直接访问<strong>DAM</strong></p>
+<p>磁盘光盘</p>
+<h3 id="SRAM和DRAM的区别">SRAM和DRAM的区别</h3>
+<p>RAM，即随机存储器或者易失性存储器，因为断电后就失去保存的数据。</p>
+<p>分为SRAM和DRAM：</p>
+<ul>
+<li>DRAM，即动态随机存储器，一般用于<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%86%85%E5%AD%98&amp;spm=1001.2101.3001.7020">内存</a>，需要不断地刷新电路，否则数据就消失了。</li>
+<li>SRAM，即静态随机存储器，一般用于CPU中的cache（高速缓冲存储器），不需要不停地刷新电路来保存数据。</li>
+</ul>
+<p>特点如下：<br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221217102634746.png" alt="image-20221217102634746"></p>
+<p><strong>寻址方式</strong></p>
+<p>SRAM的存取速度很快，但是地址线需要更多，这是因为SRAM和DRAM的寻址方式不同：</p>
+<ul>
+<li>SRAM<strong>同时发送行地址和列地址</strong>，把行地址和列地址拼接起来作为一次读写访问的地址，然后放到地址线上；</li>
+<li>SRAM有可能并没有把行地址和列地址拆分成长度相等的两段，并且行地址线和列地址线都是单独存在；</li>
+<li>DRAM是把行地址和列地址分为长度相等的两段，然后<strong>分两次发送</strong>；</li>
+<li>DRAM可以地址线复用，也就使用同一跟地址线分别发送行地址和列地址，减少了地址线的使用</li>
+</ul>
+<h3 id="芯片逻辑设计">芯片逻辑设计</h3>
+<p>主存容量=字数X位数 所以就有字扩展和位扩展</p>
+<p>字扩展：1k×8-&gt;2K×8</p>
+<p>位扩展:2K×4-&gt;2K×8</p>
+<p>先扩位再扩单元</p>
+<p>先位扩展再字扩展</p>
+<h3 id="Cache映射">Cache映射</h3>
+<h4 id="考试标准名称">考试标准名称</h4>
+<table>
+<thead>
+<tr>
+<th><strong>映射方式</strong></th>
+<th><strong>字段1</strong></th>
+<th><strong>字段2</strong></th>
+<th><strong>字段3</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>直接映射</strong></td>
+<td><strong>主存字块标记</strong></td>
+<td><strong>Cache字块地址</strong></td>
+<td><strong>字块内地址</strong></td>
+</tr>
+<tr>
+<td><strong>全相联映射</strong></td>
+<td><strong>主存字块标记</strong></td>
+<td></td>
+<td><strong>字块内地址</strong></td>
+</tr>
+<tr>
+<td><strong>组相联映射</strong></td>
+<td><strong>主存字块标记</strong></td>
+<td><strong>组地址</strong></td>
+<td><strong>字块内地址</strong></td>
+</tr>
+</tbody>
+</table>
+<p>建议查看本链接学习Cache主存地址映射</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44166630/article/details/116396751">https://blog.csdn.net/qq_44166630/article/details/116396751</a></p>
+<p>由主存地址映射到Cache地址称为地址映射。地址映射方式很多,有直接映射(固定的映射关系)、全相联映射(灵活性大的映射关系),组相联映射(上述两种映射的折中)。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221011110131493.png" alt="image-20221011110131493"></p>
+<h4 id="直接映射">直接映射</h4>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221011113749766.png" alt="image-20221011113749766"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221013110911380.png" alt="image-20221013110911380"></p>
+<p>如果没给字长，那就按字节算</p>
+<h5 id="例题（期末考）"><strong>例题（期末考）</strong></h5>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221011114449257.png" alt="image-20221011114449257"></p>
+<h4 id="全相联映射">全相联映射</h4>
+<p>允许主存中的每个字块映像到cache的<strong>任何一个字块</strong>位置上。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MTY2NjMw,size_16,color_FFFFFF,t_70.png" alt="在这里插入图片描述"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221013105706487.png" alt="image-20221013105706487"></p>
+<p>字块内地址2^b=块容量除以字大小</p>
+<p>块标记等于主存容量除以块容量</p>
+<h4 id="组相联映射">组相联映射</h4>
+<p>组相联映像方式为前两种方式的折衷。其方法是将cache按某种规格分组，主存中若干字块映射到同一个组中，组间为直接映像方式，组内为全相联映像。</p>
+<p>主存字块在cache组号求法为：<strong>主存字块号 mod cache组数</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MTY2NjMw,size_16,color_FFFFFF,t_70-16656325691363.png" alt="在这里插入图片描述"></p>
+<p>其中字块和组的对应关系相当于直接映射，字块0存组0，字块1存组1，字块n存n mod 组数</p>
+<p>其中字块具体存到组中哪个字块相当于全相连映射，存到哪里不固定</p>
+<p>因此组相联映射是两种方案的折中。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221217144814530.png" alt="image-20221217144814530"></p>
+<h4 id="综合例题-期末考">综合例题(期末考)</h4>
+<p><code>注意题目中说访存地址为字地址，则最小编址单位为字，如果没说就是字节</code></p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221018104928113.png" alt="image-20221018104928113" style="zoom:150%;" />
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221018112042336.png" alt="image-20221018112042336"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221018112103270.png" alt="image-20221018112103270"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221018112132402.png" alt="image-20221018112132402"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221018120249943.png" alt="image-20221018120249943"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221018120137309.png" alt="image-20221018120137309"></p>
+<h3 id="低位-高位交叉编址">低位\高位交叉编址</h3>
+<p><strong>1.多体并行存储器</strong></p>
+<p>多体并行交叉存储器是由多个独立的、容量相同的存储模块构成的多体模块存储器。它解决的主要问题是提高主存储器的数据传输速率。</p>
+<p>多体并行存储器分为高位交叉编址和低位交叉编址两种。</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fengchuiguobanxia/p/16119482.html">https://www.cnblogs.com/fengchuiguobanxia/p/16119482.html</a></p>
+<p>对于高位交叉编址比较好理解，就像单元号与房号。体号就是单元号，找到程序在体，体内地址就是房号，找到程序的开始位置。</p>
+<p>如何理解程序连续放在相邻的体中，我们举个实际例子：</p>
+<p>存储体的有2个存储芯片，存储周期为100ns,数据按放置方法，先放第一个芯片，放满后再放第2个芯片（顺序方式）。</p>
+<p>那么你读数据的过程就是这样：读0位置数据，等100ns，读1位置数据，等100ns读2位置数据。</p>
+<p>但如果换个方式来放，0位置是1号芯片起始，1位置是2号芯片起始位置，2位置是1号芯片第2个单元，3位置是2号芯片的第2个单元这样交叉来编址。</p>
+<p>再回忆存取周期的概念：存取周期等于存取时间+恢复时间，你读一个芯片后，必须间隔一段时间才能去读。采用交叉编址后，你的读过程就像这样：</p>
+<p>读0位置数据到缓冲区，40ns后，CPU取走了数据。这时1号芯片的100ns的周期还没过，不能去读，但幸运的是我们读的不是1号芯片，而是2号芯片，这样，我们就把2号芯片的数据读到缓冲区。过了40ns后，CPU取走数据，此时过去了80ns，我们只需再等20ns就可以继续去读3号位置数据，这样速度就比以前快了很多。</p>
+<p><strong>省流：因为存储周期长，但是传输周期短，都存到一个存储体读的时候浪费时间，所以可以从1读，读完同时从2读，此时1的存储周期还没完</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221204105207556.png" alt="image-20221204105207556"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221204105544304.png" alt="image-20221204105544304"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bd-hexo.oss-cn-beijing.aliyuncs.com/img/image-20221204105820312.png" alt="image-20221204105820312"></p>
+<h3 id="虚拟存储器">虚拟存储器</h3>
+<p>重要的是概念</p>
+<p>有段式页式段页式，感觉和操作系统差不多，都是用“页”交互的</p>
+<p>快表TLB: 慢表的副本，从慢表中提取更常用的存快表</p>
+<p>慢表Page: 独立出一个表存常用的</p>
+<p>将当前最常用的页表信息存放在一个小容量的高速存储器中称为快表。与快表相对应存放在主存中的页表称为慢表。快表仅是慢表的一个小量副本。快表采用组相连存储器，查表速度快。</p>
+<p>TLB命中Page必命中，因为TLB只是page的一个小副本</p>
+<h2 id="第六章：总线">第六章：总线</h2>
+<h3 id="总线分类">总线分类</h3>
+<p>1.片内总线<br>
+片内总线是芯片内部的总线，它是cpu芯片内部的寄存器与寄存器之间，寄存器与ALU之间的公共连线。<br>
+2.系统总线：系统总线是计算机内各功能部件之间互相连接的总线（如cpu，主存和IO设备）。其分类如下：</p>
+<ul>
+<li>数据总线：用来传输各功能部件之间的数据信息，是双向传输总线，其位数与机器字长，存储字长有关。</li>
+<li>地址总线：用来传输数据在主存单元或I/O端口的地址，是单向传输总线，地址总线的位数与主存地址空间大小有关。</li>
+<li>控制总线：用来传输控制信息，包括cpu送出的控制命令和主存（或外设）返回cpu的反馈信号。</li>
+</ul>
+<p>3.I/O总线<br>
+I/O总线主要用于连接低速的I/O设备，通过I/O接口与系统总线相连接，目的是将低速设备与高速总线分离，以提升总线的系统性能。</p>
+<p>4.通信总线<br>
+通信总线是计算机系统之间或计算机系统与其它系统之间传送信息的总线，通信总线也称为外部总线。</p>
+<p>其他分类：同步总线，异步总线，并行总线，串行总线。</p>
+<blockquote>
+<p>串行总线和并行总线的比较： 串行总线一次只能传送一位数据，并行总线一次可以传送多位数据。<br>
+但是并不意味着并行总线的传输速度一定高于串行总线，原因如下：<br>
+在实际时钟频率较低的情况下，并行总线因为可以同时传送若干比特，所以速率确实比串行总线快，但是随着时钟频率的提高，当在高时钟频率下传输时，并行总线相邻总线之间的干扰会很严重，甚至使传输的数据无法恢复。并行总线线路多且复杂，串行总线线路较少，干扰易控制。</p>
+</blockquote>
+<h3 id="总线数据传输方式">总线数据传输方式</h3>
+<ul>
+<li>1）**并行传送方式：**数据的每一位利用多条数据线同时传输构成并行传送。传输速率高，成本大，传输距离受限。</li>
+<li>2）**串行传送方式：**数据的各位利用一条数据线进行传输，传输速率低，传送距离远，数据线少，成本低。可同步/异步</li>
+<li>3）<strong>分时传送方式：</strong> 是指在不同时段利用总线上同一个信号线传送不同信息。又称分时复用。</li>
+<li>4）<strong>消息传送方式：</strong> 消息传送以猝发方式传送数据包。猝发方式是在同一个总线周期中利用一个地址段和多个数据段连续传输数据的一种手段，可连续传输数据。消息传送使一次传送实现更多更快的信息传递。PCI，USB使用消息传递。</li>
+</ul>
+<h3 id="总线通信方式">总线通信方式</h3>
+<ul>
+<li>1）<strong>同步通信方式</strong><br>
+收发方公用同一时钟，按照该共同时钟频率进行传输。并且使用固定的传输协议，该协议用于与时钟相关联的通信。<br>
+<strong>同步通信总线的缺点</strong>：1.总线上每个设备必须使用相同的时钟频率，且该频率由最慢的设备决定。 2.由于时钟偏移问题，使得高速同步通信总线的长度不能太长。</li>
+<li>2）<strong>异步通信方式</strong><br>
+异步通信总线不适用公共时钟定时，总线中没有时钟线，克服了同步通信总线的两个缺点。使用握手协议来协调发送设备和接收设备之间的数据传递。典型的握手信号有：<br>
+数据就绪（DATA RDY）/请求（REQ）和应答（ACK），两握手信号有三种不同的协议：非互锁，半互锁，全互锁。 非互锁最快</li>
+</ul>
+<h1>输入输出系统</h1>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38515961/article/details/120568864">https://blog.csdn.net/qq_38515961/article/details/120568864</a></p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>计算机组成原理复习</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://bdsnake.github.io/posts/eb67d5e1.html">https://bdsnake.github.io/posts/eb67d5e1.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>BDsnake</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-11-16</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2024-08-12</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>期末复习</a></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂作者</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4f823f0d.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">面试知识：Java基础篇</div></div></a></div><div class="next-post pull-right"><a href="/posts/fc640ee4.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/wy/wallhaven-wyqjoq.jpg" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">SpringCloud笔记(一)</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/cd647b6c.html" title="操作系统复习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/wy/wallhaven-wyqjoq.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-08-12</div><div class="title">操作系统复习</div></div></a></div><div><a href="/posts/ecc774e9.html" title="编译原理复习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-08-12</div><div class="title">编译原理复习</div></div></a></div><div><a href="/posts/89cc8e3f.html" title="软件体系结构复习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-08-12</div><div class="title">软件体系结构复习</div></div></a></div><div><a href="/posts/9a8cdc59.html" title="计算机网络复习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/wy/wallhaven-wyqjoq.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-08-12</div><div class="title">计算机网络复习</div></div></a></div><div><a href="/posts/6fd2a56a.html" title="软件建模"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/wy/wallhaven-wyqjoq.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-08-12</div><div class="title">软件建模</div></div></a></div><div><a href="/posts/2438eaf0.html" title="软件质量保证与测试复习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-08-12</div><div class="title">软件质量保证与测试复习</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">计算机组成原理复习</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">零、老师说了啥</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">零点五、考试提纲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">一、简答题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%EF%BC%9FP7"><span class="toc-text">1.如何理解计算机组成和计算机体系结构？P7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E7%89%B9%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9FP8"><span class="toc-text">2.冯诺依曼计算机的特点是什么？P8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%8C%87%E5%87%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%845%E5%A4%A7%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90%E5%8F%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%9A%843%E4%B8%AA%E4%B8%BB%E8%A6%81%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87%E3%80%82P9-P17"><span class="toc-text">请指出计算机的5大硬件组成及计算机硬件的3个主要技术指标。P9 P17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%80%BB%E7%BA%BF%E9%9B%86%E4%B8%AD%E6%8E%A7%E5%88%B6%E4%BC%98%E5%85%88%E6%9D%83%E4%BB%B2%E8%A3%81%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%EF%BC%9FP57"><span class="toc-text">常见的总线集中控制优先权仲裁方式有哪几种？P57</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E5%86%99%E6%80%BB%E7%BA%BF%E5%91%A8%E6%9C%9F%E7%9A%844%E4%B8%AA%E9%98%B6%E6%AE%B5%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9FP59"><span class="toc-text">请写总线周期的4个阶段分别是什么？P59</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E4%B8%BB%E8%A6%81%E4%BD%93%E7%8E%B0%E5%9C%A8%E5%93%AA%E4%B8%A4%E4%B8%AA%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1%E4%B8%8A%EF%BC%9F%E5%88%86%E5%88%AB%E4%B8%BB%E8%A6%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9FP71"><span class="toc-text">存储系统层次结构主要体现在哪两个存储层次上？分别主要解决什么问题？P71</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81RAM%E5%92%8C%E9%9D%99%E6%80%81RAM%E7%9A%84%E5%8C%BA%E5%88%AB%E3%80%82P87"><span class="toc-text">动态RAM和静态RAM的区别。P87</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%90%E9%AB%98%E8%AE%BF%E5%AD%98%E9%80%9F%E5%BA%A6%E7%9A%84%E5%8C%BA%E5%88%AB%E3%80%82P103"><span class="toc-text">常用的提高访存速度的区别。P103</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E5%A4%A7%E8%87%B4%E5%88%86%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%EF%BC%9FP156"><span class="toc-text">输入输出系统的发展大致分几个阶段？P156</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%BF%B0I-O%E8%AE%BE%E5%A4%87%E4%B8%8E%E4%B8%BB%E6%9C%BA%E4%BF%A1%E6%81%AF%E4%BC%A0%E8%BE%93%E7%9A%84%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F%E3%80%82P162"><span class="toc-text">简述I&#x2F;Ｏ设备与主机信息传输的控制方式。P162</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E4%B8%80%E8%88%AC%E6%98%AF%E7%94%B1%E5%93%AA%E4%B8%A4%E9%83%A8%E5%88%86%E7%BB%84%E6%88%90%E7%9A%84%EF%BC%9F%E5%90%84%E9%83%A8%E5%88%86%E7%9A%84%E4%BD%9C%E7%94%A8%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9FP300"><span class="toc-text">指令一般是由哪两部分组成的？各部分的作用分别是什么？P300</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E6%AF%94CISC%E6%9C%BA%EF%BC%8CRISC%E6%9C%BA%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BC%98%E7%82%B9%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9FP333"><span class="toc-text">相比CISC机，RISC机的主要优点有哪些？P333</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E6%88%90CPU%E7%9A%84%E4%B8%BB%E8%A6%81%E5%9B%9B%E4%B8%AA%E9%83%A8%E4%BB%B6%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9FP338"><span class="toc-text">构成CPU的主要四个部件分别是什么？P338</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%93%8D%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%80%A7%E8%83%BD%E7%9A%84%E5%9B%A0%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9FP349"><span class="toc-text">影响流水线性能的因素有哪些？P349</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%BF%B0%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E7%9A%84%E6%AD%A5%E9%AA%A4%E3%80%82P401"><span class="toc-text">简述组合逻辑设计控制单元的步骤。P401</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%BF%B0%E5%BE%AE%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%8E%A7%E5%88%B6%E5%8D%95%E5%85%83%E7%9A%84%E6%AD%A5%E9%AA%A4%E3%80%82P415"><span class="toc-text">简述微程序设计控制单元的步骤。P415</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">对选择题的研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-text">第一章</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">对大题的研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%AE%B9"><span class="toc-text">扩容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E7%9B%98"><span class="toc-text">磁盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cache%E3%80%81%E5%8D%81%E8%BF%9B%E5%88%B6%E7%9A%84%E6%95%B4%E6%95%B0%E3%80%81%E5%B0%8F%E6%95%B0%E5%8C%96%E6%88%90%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%EF%BC%8C%E6%B1%82%E7%9C%9F%E5%80%BC%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81"><span class="toc-text">cache、十进制的整数、小数化成二进制数，求真值的原码反码补码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%82%E7%9B%B8%E5%8F%8D%E6%95%B0%E7%9A%84%E8%A1%A5%E7%A0%81%EF%BC%8C%E6%B1%82%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E6%88%96%E5%87%8F%E7%9A%84%E8%A1%A5%E7%A0%81%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%EF%BC%8C"><span class="toc-text">求相反数的补码，求两数相加或减的补码计算过程，</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E7%AB%A0%E4%BE%8B%E9%A2%98"><span class="toc-text">7章例题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1"><span class="toc-text">9.1</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">知识点速通</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">第一章 计算机基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-text">第二章 数据信息表示方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%8C%87%E4%BB%A4%E4%BF%A1%E6%81%AF%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-text">第三章 指令信息表示方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%AF%BB%E5%9D%80"><span class="toc-text">指令寻址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AF%BB%E5%9D%80-%E6%84%9F%E8%A7%89%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-text">数据寻址 感觉选择题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="toc-text">指令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RISC%E4%B8%8ECISC"><span class="toc-text">RISC与CISC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-CPU%E7%B3%BB%E7%BB%9F"><span class="toc-text">第四章 CPU系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-text">指令执行过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E5%AD%97%E9%95%BF"><span class="toc-text">各种字长</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F"><span class="toc-text">第五章 存储系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">存储方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRAM%E5%92%8CDRAM%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">SRAM和DRAM的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%AF%E7%89%87%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1"><span class="toc-text">芯片逻辑设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache%E6%98%A0%E5%B0%84"><span class="toc-text">Cache映射</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%80%83%E8%AF%95%E6%A0%87%E5%87%86%E5%90%8D%E7%A7%B0"><span class="toc-text">考试标准名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%98%A0%E5%B0%84"><span class="toc-text">直接映射</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98%EF%BC%88%E6%9C%9F%E6%9C%AB%E8%80%83%EF%BC%89"><span class="toc-text">例题（期末考）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E7%9B%B8%E8%81%94%E6%98%A0%E5%B0%84"><span class="toc-text">全相联映射</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E7%9B%B8%E8%81%94%E6%98%A0%E5%B0%84"><span class="toc-text">组相联映射</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%BC%E5%90%88%E4%BE%8B%E9%A2%98-%E6%9C%9F%E6%9C%AB%E8%80%83"><span class="toc-text">综合例题(期末考)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8E%E4%BD%8D-%E9%AB%98%E4%BD%8D%E4%BA%A4%E5%8F%89%E7%BC%96%E5%9D%80"><span class="toc-text">低位\高位交叉编址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">虚拟存储器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E6%80%BB%E7%BA%BF"><span class="toc-text">第六章：总线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E5%88%86%E7%B1%BB"><span class="toc-text">总线分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F"><span class="toc-text">总线数据传输方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-text">总线通信方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">输入输出系统</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://stellarium.org/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a href="/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="BDsnake"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/60e5d4e39da7c077.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2022-2024</b></span><span><b>&nbsp;&nbsp;By BDsnake</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/萌ICP备-20226665-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: '',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法与外挂标签写法汇总</a><div class="blog-slider__text">🥧本文汇总Markdown格式以及外挂标签在网页端的渲染效果，可作为文档进行查询</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/5400c07c.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-03-01</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/5400c07c.html&quot;);" href="javascript:void(0);" alt="">minio——对象存储</a><div class="blog-slider__text">摘要</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/5400c07c.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
