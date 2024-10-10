@@ -7773,9 +7773,8 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp)
-    no-repeat center center;
-  background-size: cover;
+    background: url(https://bd-hexo.oss-cn-beijing.aliyuncs.com/custom/QQ20240912-134649.png) no-repeat center center;
+    background-size: cover;
 }
 
 /* heo 夜间模式加载背景色 */
