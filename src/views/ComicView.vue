@@ -2,12 +2,13 @@
 import DefaultBackground from "@/components/index/DefaultBackground.vue";
 import Card from "@/components/index/Card.vue";
 import ImageCard from "@/components/index/ImageCard.vue";
+import {computed, onMounted} from "vue";
 // 定义多个 ImageCard 的数据
 const cards = [
   {
     title: "败犬女主太多了",
     year: "2024",
-    category: "动作",
+    category: "恋爱",
     imageUrl: new URL('@/assets/img/comic/败犬女主太多了.png', import.meta.url).href,
     description: "洒脱的女生很有魅力"
   },
@@ -18,10 +19,8 @@ const cards = [
     imageUrl: new URL('@/assets/img/comic/小魔女学园.jpg', import.meta.url).href,
     description: "相信的心就是你的魔法！"
   },
-  { title: "败犬女主太多了", year: "2024", category: "动作", imageUrl: new URL('@/assets/img/comic/败犬女主太多了.png', import.meta.url).href },
-  { title: "败犬女主太多了", year: "2024", category: "动作", imageUrl: new URL('@/assets/img/comic/败犬女主太多了.png', import.meta.url).href },
-  { title: "败犬女主太多了", year: "2024", category: "动作", imageUrl: new URL('@/assets/img/comic/败犬女主太多了.png', import.meta.url).href },
 ];
+
 </script>
 
 <template>

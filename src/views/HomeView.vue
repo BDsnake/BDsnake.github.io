@@ -66,6 +66,25 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
     </div>
     <!-- 为 qqs 添加背景图的 div -->
     <div class="main-content">
+          <Card :is-blur="true" class="main-card">
+            <h1 style=" width: 100%; /* 确保占满整个父容器 */
+            text-align: center; /* 居中对齐文本 */
+            margin: 0; /* 去除默认的上下外边距 */
+            padding: 10px 0; /* 给 h1 添加上下内边距 */
+            font-size: 2rem; /* 调整字体大小 */
+            font-weight: bold; /* 加粗字体 */">公告</h1>
+            <span style="margin-top: 20px;margin-bottom: 20px">
+              <h2>
+                ○本站试运行中... 投稿地址：<a href="https://docs.qq.com/sheet/DVktib1psdFZNTm1t">唉牛魔俱乐部网站建设</a>
+              </h2>
+              <h2>
+                ○未适配移动端
+              </h2>
+              <h2>
+                ○欢迎分享资源&提出建议
+              </h2>
+        </span>
+          </Card>
 
       <Card :is-blur="true" class="main-card">
         <h1 style=" width: 100%; /* 确保占满整个父容器 */
@@ -78,6 +97,7 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
         <!-- 使用 v-for 遍历 QQ 数组 -->
         <avatar v-for="(qq, index) in qqList" :key="index" :QQ="qq"/>
       </Card>
+
 
     </div>
   </default-background>
@@ -103,8 +123,9 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
   white-space: nowrap;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 阴影效果 */
 }
-#card{
+.main-card{
   justify-content: center;
+  margin-top:200px;
 }
 #subtitle {
   position: absolute;
@@ -123,6 +144,9 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
 
 /* 内容区域，确保可以滑动 */
 .main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: relative;
   z-index: 1;
   overflow-y: auto;

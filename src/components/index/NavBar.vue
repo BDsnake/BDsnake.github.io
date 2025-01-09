@@ -5,8 +5,11 @@ import { ref } from "vue";
 const baseUrl = '/ANMclub';
 
 const navLinks = ref([
-  { name: '首页', link: '/' },  // 修改链接为 /home
-  { name: '动漫', link: '/comic' }
+  { name: '首页', link: '/home' },  // 修改链接为 /home
+  { name: '动漫', link: '/comic' },
+  {name:'游戏',link: '/game'},
+  {name:'黄油',link:'yellowGame'},
+  {name:'网站',link: 'website'}
 ]);
 </script>
 
@@ -63,7 +66,7 @@ header.navbar {
   font-size: 1rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  color: #111;
+  color: #ddd;
   transition: color 0.3s ease, background-color 0.3s ease;
   border-radius: 5px;
 }

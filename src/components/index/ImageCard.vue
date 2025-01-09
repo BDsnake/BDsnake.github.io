@@ -43,7 +43,7 @@ const closeModal = () => {
 <template>
   <div class="card" @click="openModal">
     <div class="image-container">
-      <img :src="props.imageUrl" alt="card image" class="card-image"/>
+      <el-image :src="props.imageUrl" alt="card image" class="card-image"/>
     </div>
     <div class="card-content">
       <h3 class="card-title">{{ props.title }}</h3>
@@ -88,25 +88,31 @@ const closeModal = () => {
   flex-direction: column; /* 纵向排列 */
   width: 100%;
   max-width: 320px; /* 限制最大宽度 */
-  height: 380px; /* 高度可以根据需要调整 */
+  height: 320px; /* 高度可以根据需要调整 */
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 10px;
   cursor: pointer; /* 增加点击效果 */
+
 }
 
 .image-container {
   width: 100%;
-  height: 60%; /* 图片占卡片的 60% */
+  height: 60%; /* 图片占卡片的 60% *//*和card-content对应 别乱改*/
   overflow: hidden;
 }
 
 .card-image {
+  ////width: 100%;
+  //height: 100%;
+  //object-fit: cover; /* 图片覆盖容器 */
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 图片覆盖容器 */
+  object-fit: cover; /* 保持图片的宽高比并铺满 div */
+  object-position: center; /* 图片居中 */
+
   transition: transform 0.6s ease; /* 添加过渡动画 */
 }
 .card-image:hover {
@@ -114,6 +120,7 @@ const closeModal = () => {
 }
 .card-content {
   width: 100%;
+  height: 40%;/*和card-image对应 别乱改*/
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -130,9 +137,11 @@ const closeModal = () => {
 .card-footer {
   display: flex;
   justify-content: space-between; /* 分类居左，年份居右 */
-  font-size: 1.5rem;
+  margin-top: auto;
+  font-size: 1.1rem;
   color: #777;
   width: 100%;
+
 }
 
 .card-category {

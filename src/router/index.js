@@ -6,7 +6,11 @@ const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path:'/',
+      redirect:'/home'
+    },
+    {
+      path: '/home',
       name:'home',
       component:()=>import('../views/HomeView.vue')
     },
@@ -23,6 +27,21 @@ const router = createRouter({
       name:'comic',
       component:()=>import('../views/ComicView.vue')
     },
+    {
+      path:'/game',
+      name:'game',
+      component:()=>import('../views/GameView.vue')
+    },
+    {
+      path:'/yellowGame',
+      name:'yellowGame',
+      component:()=>import('../views/YellowGame.vue')
+    },
+    {
+      path:'/website',
+      name:'website',
+      component:()=>import('../views/WebsiteView.vue')
+    }
   ],
 })
 
