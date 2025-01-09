@@ -59,17 +59,21 @@ const closeModal = () => {
     <div class="modal-content" @click.stop>
       <InfoCardWithBg :bgImage="props.imageUrl" :title="props.title" :year="props.year" :category="props.category">
         <el-row style="height: 100%;width: 100%">
-          <el-col :span="8">
-            <div style="font-size: 50px">
-              {{props.title}}
+          <el-col :span="8" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-size: 50px; margin-bottom: 10px;">
+              {{ props.title }}
             </div>
-            <div style="font-size: 20px">
-              {{props.year}}···{{props.category}}
+            <div style="font-size: 20px; color: #777;">
+              {{ props.year }} ··· {{ props.category }}
             </div>
           </el-col>
-          <el-col :span="16">
-            <div style="font-size: 30px;text-align: left">
-              {{props.description}}
+          <!-- 竖线分隔符 -->
+          <el-col :span="1" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
+          <div style="border-left: 2px dashed #ccc; height: 80%"></div>
+          </el-col>
+          <el-col :span="15" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-size: 30px; text-align: left; color: #333;">
+              {{ props.description }}111112sdssfs32131
             </div>
           </el-col>
         </el-row>

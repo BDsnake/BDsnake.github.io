@@ -27,6 +27,7 @@ const router = createRouter({
       component:()=>import('../views/ComicView.vue')
     }
   ],
+  base: '/ANMclub/', // Add the base path here
 })
 
 export default router
