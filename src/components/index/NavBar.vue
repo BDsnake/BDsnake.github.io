@@ -2,9 +2,11 @@
 // 动态导航配置
 import {ref} from "vue";
 
+const baseUrl = '/ANMclub'
+
 const navLinks = ref([
-  { name: '首页', link: '/' },
-  { name: '动漫', link: '/comic' }])
+  { name: '首页', link: baseUrl+'/' },
+  { name: '动漫', link: baseUrl+'/comic' }])
 </script>
 
 <template>
