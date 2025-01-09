@@ -73,7 +73,7 @@ const closeModal = () => {
           </el-col>
           <el-col :span="15" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
             <div style="font-size: 30px; text-align: left; color: #333;">
-              {{ props.description }}111112sdssfs32131
+              {{ props.description }}
             </div>
           </el-col>
         </el-row>

@@ -3,11 +3,12 @@ import HomeView from "@/views/HomeView.vue";
 import ComicView from "@/views/ComicView.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect:'/home'
+      name:'home',
+      component:()=>import('../views/HomeView.vue')
     },
     {
       path: '/about',
@@ -18,21 +19,11 @@ const router = createRouter({
       component: () => import('../views/default/AboutView.vue'),
     },
     {
-      path:'/home',
-      name:'home',
-      component:()=>import('../views/HomeView.vue')
-    },
-    {
       path:'/comic',
-      redirect:'/real/comic'
-    },
-    {
-    path:'/real/comic',
       name:'comic',
       component:()=>import('../views/ComicView.vue')
-    }
+    },
   ],
-  base: '/ANMclub/', // Add the base path here
 })
 
 export default router

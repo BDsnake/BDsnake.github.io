@@ -65,9 +65,9 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
       </h2>
     </div>
     <!-- 为 qqs 添加背景图的 div -->
-    <div id="content">
+    <div class="main-content">
 
-      <Card :is-blur="true" class="card">
+      <Card :is-blur="true" class="main-card">
         <h1 style=" width: 100%; /* 确保占满整个父容器 */
   text-align: center; /* 居中对齐文本 */
   margin: 0; /* 去除默认的上下外边距 */
@@ -122,7 +122,7 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
 
 
 /* 内容区域，确保可以滑动 */
-#content {
+.main-content {
   position: relative;
   z-index: 1;
   overflow-y: auto;

@@ -77,7 +77,7 @@ const props = defineProps({
     background-size: 100%;
   }
   50% {
-    background-size: 105%; /* 放大 5% */
+    background-size: 110%; /*呼吸放大比例*/
   }
   100% {
     background-size: 100%;

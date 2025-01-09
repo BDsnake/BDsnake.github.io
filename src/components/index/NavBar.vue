@@ -1,12 +1,13 @@
 <script setup>
 // 动态导航配置
-import {ref} from "vue";
+import { ref } from "vue";
 
-const baseUrl = '/ANMclub'
+const baseUrl = '/ANMclub';
 
 const navLinks = ref([
-  { name: '首页', link: baseUrl+'/' },
-  { name: '动漫', link: baseUrl+'/comic' }])
+  { name: '首页', link: '/' },  // 修改链接为 /home
+  { name: '动漫', link: '/comic' }
+]);
 </script>
 
 <template>
@@ -14,11 +15,11 @@ const navLinks = ref([
     <ul class="nav-list">
       <!-- 动态渲染导航项 -->
       <li v-for="item in navLinks" :key="item.name" class="nav-item">
-        <a :href="item.link" class="nav-link">{{ item.name }}</a>
+        <!-- 使用 router-link 替代 a 标签 -->
+        <router-link :to="item.link" class="nav-link">{{ item.name }}</router-link>
       </li>
     </ul>
   </header>
-
 </template>
 
 <style scoped>
@@ -43,7 +44,6 @@ header.navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  //background-color: transparent;
   backdrop-filter: blur(10px); /* 毛玻璃效果 */
   border-bottom: 0px solid #ddd;
   padding: 1rem 0;
@@ -71,7 +71,6 @@ header.navbar {
 .nav-item .nav-link:hover {
   color: #ffffff;
   background-color: #007bff;
-
   border-radius: 5px;
 }
 </style>
