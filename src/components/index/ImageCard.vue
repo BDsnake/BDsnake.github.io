@@ -58,7 +58,21 @@ const closeModal = () => {
   <div v-if="isModalVisible" class="modal-overlay" @click="closeModal">
     <div class="modal-content" @click.stop>
       <InfoCardWithBg :bgImage="props.imageUrl" :title="props.title" :year="props.year" :category="props.category">
-        <h1>{{props.title}}</h1>
+        <el-row style="height: 100%;width: 100%">
+          <el-col :span="8">
+            <div style="font-size: 50px">
+              {{props.title}}
+            </div>
+            <div style="font-size: 20px">
+              {{props.year}}···{{props.category}}
+            </div>
+          </el-col>
+          <el-col :span="16">
+            <div style="font-size: 30px;text-align: left">
+              {{props.description}}
+            </div>
+          </el-col>
+        </el-row>
       </InfoCardWithBg>
     </div>
   </div>

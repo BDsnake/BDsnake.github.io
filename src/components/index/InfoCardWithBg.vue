@@ -58,8 +58,9 @@ const props = defineProps({
 .slot-wrapper {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
   background-color: rgba(255, 255, 255, 0.6); /* 半透明白色背景 */
   border-radius: 20px;
