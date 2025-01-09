@@ -21,8 +21,13 @@ const router = createRouter({
       path:'/home',
       name:'home',
       component:()=>import('../views/HomeView.vue')
-    },{
-    path:'/comic',
+    },
+    {
+      path:'/comic',
+      redirect:'/real/comic'
+    },
+    {
+    path:'/real/comic',
       name:'comic',
       component:()=>import('../views/ComicView.vue')
     }
