@@ -20,11 +20,11 @@ const router = createRouter({
     {
       path:'/home',
       name:'home',
-      component:HomeView
+      component:()=>import('../views/HomeView.vue')
     },{
     path:'/comic',
       name:'comic',
-      component:ComicView
+      component:()=>import('../views/ComicView.vue')
     }
   ],
 })
