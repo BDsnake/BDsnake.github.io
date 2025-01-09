@@ -60,6 +60,20 @@ const cards = [
     imageUrl: new URL('@/assets/img/game/非生物因素.jpg', import.meta.url).href,
     description: "scp"
   },
+  {
+    title: "燕云十六声",
+    year: "2024",
+    category: "MMORPG",
+    imageUrl: new URL('@/assets/img/game/燕云十六声.jpg', import.meta.url).href,
+    description: "因触犯律令，少侠已被判处笞刑，将于5年后刑满"
+  },
+  {
+    title: "使命召唤：黑色行动6",
+    year: "2024",
+    category: "FPS",
+    imageUrl: new URL('@/assets/img/game/使命召唤：黑色行动6.jpg', import.meta.url).href,
+    description: "神中神，屎中屎"
+  },
 ];
 </script>
 
