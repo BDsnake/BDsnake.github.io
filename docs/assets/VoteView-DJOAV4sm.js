@@ -1,0 +1,1 @@
+import{_ as e,c,b as t}from"./index-CPnBs3kH.js";const o={},s={src:"https://wj.qq.com/s2/17566331/60c9/"};function r(_,a){return t(),c("iframe",s)}const d=e(o,[["render",r],["__scopeId","data-v-bdec6790"]]);export{d as default};

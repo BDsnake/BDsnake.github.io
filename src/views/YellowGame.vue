@@ -10,7 +10,15 @@ const cards = [
     category: "黄油",
     imageUrl: new URL('@/assets/img/yellowGame/不双修就去世.jpg', import.meta.url).href,
     description: "DSgame巅峰之作，梗也多"
+  },
+  {
+    title: "Nekopara 系列",
+    year: "未知",
+    category: "FPS",
+    imageUrl: new URL('@/assets/img/yellowGame/Nekopara系列.jpg', import.meta.url).href,
+    description: "艹猫"
   }
+
 ];
 </script>
 

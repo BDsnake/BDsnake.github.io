@@ -9,7 +9,8 @@ const navLinks = ref([
   { name: '动漫', link: '/comic' },
   {name:'游戏',link: '/game'},
   {name:'黄油',link:'yellowGame'},
-  {name:'网站',link: 'website'}
+  {name:'网站',link: 'website'},
+  {name: '年度群u投票',link: '/vote'}
 ]);
 </script>
 

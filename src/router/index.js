@@ -41,6 +41,11 @@ const router = createRouter({
       path:'/website',
       name:'website',
       component:()=>import('../views/WebsiteView.vue')
+    },
+    {
+      path:'/vote',
+      name:'vote',
+      component: ()=>import('../views/VoteView.vue')
     }
   ],
 })

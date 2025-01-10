@@ -74,6 +74,13 @@ const cards = [
     imageUrl: new URL('@/assets/img/game/使命召唤：黑色行动6.jpg', import.meta.url).href,
     description: "神中神，屎中屎"
   },
+  {
+    title: "TitanFall 2",
+    year: "2016",
+    category: "FPS",
+    imageUrl: new URL('@/assets/img/game/TitanFall2.jpg', import.meta.url).href,
+    description: "协议三 保护铁御"
+  },
 ];
 </script>
 
