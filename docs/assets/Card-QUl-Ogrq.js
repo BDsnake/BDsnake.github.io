@@ -1,1 +1,0 @@
-import{_ as r,b as t,c as o,j as c,n}from"./index-CPnBs3kH.js";const l={__name:"Card",props:{isBlur:{type:Boolean,default:!1}},setup(s){const e=s;return(a,d)=>(t(),o("div",{id:"card",class:n({"blur-effect":e.isBlur,"transparent-effect":!e.isBlur})},[c(a.$slots,"default",{},void 0,!0)],2))}},f=r(l,[["__scopeId","data-v-1c8ddd86"]]);export{f as C};

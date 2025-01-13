@@ -91,7 +91,117 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
               </h2>
         </span>
           </Card>
+      <Card :is-blur="true" class="main-card">
+        <div class="card-inner-block">
+          <h2>2024年度成功人士</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2397216368'"/>
+        </div>
 
+        <div class="card-inner-block">
+          <h2>2024年度搬屎大王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2142701038'"/>
+          <avatar :QQ="'2572896803'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度抽象大王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'1109484851'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度发电大王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'473761795'"/>
+          <avatar :QQ="'1109484851'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度唉王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2698350024'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度emo大王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2698350024'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度最深情</h2>
+        </div>
+        <div class="card-inner-block">
+          <h3>无人获选 全是渣男</h3>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度渣男</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2698350024'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度sh准时宝</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2810731685'"/>
+          <avatar :QQ="'473761795'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度鸽王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2698350024'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度ghs大王</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'2142701038'"/>
+        </div>
+
+        <div class="card-inner-block">
+          <h2>2024年度管人痴</h2>
+        </div>
+        <div class="card-inner-block">
+          <avatar :QQ="'1109484851'"/>
+          <avatar :QQ="'1243895897'"/>
+        </div>
+        <div class="card-inner-block">
+          <h2>2024群u建议</h2>
+        </div>
+        <div class="card-inner-block">
+          <h3 style="color: blueviolet">
+            <p>
+              不要读研
+            </p>
+            <p>
+              玩无限暖暖的人还不够多
+            </p>
+            <p>
+              建议群友更正对我的刻板印象
+            </p>
+            <p>
+              多搞涩涩
+            </p>
+            <p>
+              多玩原神，别只有我玩
+            </p>
+          </h3>
+        </div>
+      </Card>
       <Card :is-blur="true" class="main-card">
         <h1 style=" width: 100%; /* 确保占满整个父容器 */
   text-align: center; /* 居中对齐文本 */
@@ -103,6 +213,8 @@ const qqList = ['295935489', '2810731685', '1437818923', '3415246242',
         <!-- 使用 v-for 遍历 QQ 数组 -->
         <avatar v-for="(qq, index) in qqList" :key="index" :QQ="qq"/>
       </Card>
+
+
 
 
     </div>
@@ -172,5 +284,13 @@ avatar {
   flex: 0 0 auto; /* 防止头像组件伸缩，保持其原有宽度 */
   width: 100px; /* 每个 avatar 的固定宽度 */
   height: 100px; /* 固定高度，根据需要调整 */
+}
+
+.card-inner-block{
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  justify-content: center;
+  display: flex;
 }
 </style>
