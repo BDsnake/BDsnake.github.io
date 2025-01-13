@@ -1,6 +1,8 @@
 <script setup xmlns="http://www.w3.org/1999/html">
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from "@/components/index/NavBar.vue";
+
+document.title = '唉牛魔俱乐部';
 </script>
 
 <template>
